@@ -1,7 +1,7 @@
 package com.compass
 
 import com.compass.Accuracies.NoneAcc
-import com.compass.infrastructure.ContactFileReader
+import com.compass.infrastructure.{ContactFileReader, ContactFileWriter}
 
 object Main extends App {
 
@@ -9,6 +9,8 @@ object Main extends App {
 
     val contacts: List[Contact]                          = ContactFileReader.readContactsFromCsv("src/main/resources/contacts.csv")
     val matches: List[(Int, Int, Accuracies.Acurracies)] = Contact.findPotentialMatches(contacts)
+    println(contacts)
+    ContactFileWriter.writeResult(matches)
 
     val header    = f"${"ContactID"}%-15s ${"Source ContactID"}%-20s ${"Match Accuracy"}%-15s"
     val separator = "-" * header.length

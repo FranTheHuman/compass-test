@@ -1,0 +1,4 @@
+ContactID,Source ContactID,Match Accuracy
+1001,1002,High
+1001,1003,Low
+1002,1003,NoneAcc

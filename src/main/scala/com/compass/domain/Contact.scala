@@ -37,7 +37,7 @@ object Contact {
             case (Contact(_, _, _, email1, _, _), Contact(_, _, _, email2, _, _)) if email1 == email2                                       => High
 
             case (Contact(_, _, _, _, _, address1), Contact(_, _, _, _, _, address2)) if address1 == address2 => Low
-            case (Contact(_, _, _, _, zipCode1, _), Contact(_, _, _, _, zipCode2, _)) if zipCode1 == zipCode2 => Low
+            case (Contact(_, _, lastName1, _, _, _), Contact(_, _, lastName2, _, _, _)) if lastName1 == lastName2 => Low
 
             case _  => NoneAcc
         }
