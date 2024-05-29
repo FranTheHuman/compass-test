@@ -9,7 +9,7 @@ object Main extends App {
 
     val contacts: List[Contact]                          = ContactFileReader.readContactsFromCsv("src/main/resources/contacts.csv")
     val matches: List[(Int, Int, Accuracies.Acurracies)] = Contact.findPotentialMatches(contacts)
-    println(contacts)
+
     ContactFileWriter.writeResult(matches)
 
     val header    = f"${"ContactID"}%-15s ${"Source ContactID"}%-20s ${"Match Accuracy"}%-15s"
